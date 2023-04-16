@@ -1,7 +1,13 @@
-let arr = ['harry', 'ron', 'hermione'];
-
-for (let i = 0; i < arr.length; i++) {
-  console.log(arr[i]);
+function Person(name) {
+  this.name = name;
+  this.sayHi = function() {
+    console.log('Hi, my name is ' + this.name);
+  };
 }
 
-console.log(15)
+const person = new Person('Alice');
+
+
+person.sayHi(); // 输出："Hi, my name is Alice"
+
+// setTimeout(person.sayHi, 1000); // 输出："Hi, my name is undefined"
